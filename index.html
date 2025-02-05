@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لعبة القسمة للأطفال</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body dir="rtl">
+    <!-- شاشة البداية -->
+    <div id="start-screen">
+        <h1 class="animate__animated animate__bounce" id="title1">لعبة القسمة الممتعة </h1>
+        <button id="start-button">ابدأ اللعب</button>
+    </div>
+
+    <!-- شاشة المعلومات -->
+    <div id="info-screen" style="display: none;">
+        <div class="info-container">
+            <img src="qas_logo.png" alt="شعار جامعة القصيم" class="logo">
+            <h2>جامعة القصيم</h2>
+            <h3>قسم تقنيات التعليم</h3>
+            <p>الطالبة: إلهام عبدالله الجهني</h3>
+            <h3>مقرر الألعاب الإلكترونية والمحاكاة</p>
+            <p>إشراف: د.هناء التركي</p>
+            <button id="proceed-button">التالي</button>
+        </div>
+    </div>
+
+
+
+   
+    <!-- شاشة الفيديو -->
+    <div id="video-screen" style="display: none;">
+        <h2>شاهد هذا الفيديو لفهم طريقة القسمة</h2>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/rGMecZ_aERo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <button id="next-button">التالي</button>
+    </div>
+
+
+    <!-- شاشة اللعبة -->
+    <div id="game-screen" style="display: none;">
+        <div id="game-container">
+            <div id="question-container">
+                <div id="score-container">
+                    <div id="score">النقاط: 0</div>
+                </div>
+                <h2 class= "animate__animated animate__bounce" id="question"></h2>
+            </div>
+            <div id="options-container"></div>
+            <p id="feedback"></p>
+        </div>
+        
+       
+        
+    </div>
+
+    <div id="end-screen" class="hidden">
+        <div class="celebration">
+          <h1 class="end-title">🎉 تهانينا! 🎉</h1>
+          <p class="end-message">لقد أنهيت اللعبة!</p>
+          <p class="score-message">مجموع النقاط: <span id="final-score">0</span></p>
+          <!-- <button id="restart-button">إعادة المحاولة</button> -->
+        </div>
+      </div>
+      
+
+    <div id="confetti" class="hidden"></div>
+
+    <audio id="lose-sound" src="lose.mp3"></audio>
+    <audio id="lose-sound2" src="error.mp3"></audio>
+    <audio id="win-sound" src="win.mp3"></audio>
+    <audio id="win-sound2" src="win2.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
